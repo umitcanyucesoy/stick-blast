@@ -22,8 +22,8 @@ namespace _StickBlast.Script.Game.Management
             }
         }
         
-        private Dictionary<string, Action> _eventDictionary = new Dictionary<string, Action>();
-        private List<IEventListener> _eventListeners = new List<IEventListener>();
+        private readonly Dictionary<string, Action> _eventDictionary = new Dictionary<string, Action>();
+        private readonly List<IEventListener> _eventListeners = new List<IEventListener>();
 
         private void Awake()
         {

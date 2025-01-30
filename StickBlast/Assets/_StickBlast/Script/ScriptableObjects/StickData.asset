@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69481e19f1614e59bc91ccd2397fa469, type: 3}
+  m_Name: StickData
+  m_EditorClassIdentifier: 
+  singleMoveableObjects:
+  - {fileID: 3178443605321954981, guid: c6f716af4a3ef45aa898936adc5c0704, type: 3}
+  - {fileID: 3178443605321954981, guid: 7b806c7b11423419c9c37375eaa47a4c, type: 3}
+  doubleMoveableObjects:
+  - {fileID: 3178443605321954981, guid: 2455640fe9b5f4f3185d660f0a1c347b, type: 3}
+  - {fileID: 3178443605321954981, guid: 4a491fba1b7764dbdb2b72feacfa081c, type: 3}
+  moreMoveableObjects:
+  - {fileID: 3178443605321954981, guid: 49cb1bb32cbc043cb8951a7c713c0041, type: 3}
+  - {fileID: 3178443605321954981, guid: 4a464d50a91d04c9984e621b2246225a, type: 3}

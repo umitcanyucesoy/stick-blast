@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6894745682166728205}
   - component: {fileID: 6954817886130419840}
   - component: {fileID: 4720722756132940331}
+  - component: {fileID: 1839346884119015621}
   m_Layer: 6
   m_Name: VerticalStick
   m_TagString: GridStick
@@ -121,3 +122,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 98.247986, y: 99.83846}
   m_EdgeRadius: 0
+--- !u!114 &1839346884119015621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000347594136532310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9da6bef87644a74bc2bf56da1370733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stickDirection: 1
+  isBuilded: 0

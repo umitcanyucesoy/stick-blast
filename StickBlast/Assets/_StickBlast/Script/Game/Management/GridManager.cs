@@ -110,7 +110,7 @@ public class GridManager : MonoBehaviour, IEventListener
             }
         }
         
-        /*for (int i = 0; i < rows - 1; i++)
+        for (int i = 0; i < rows - 1; i++)
         {
             for (int j = 0; j < columns - 1; j++)
             {
@@ -122,14 +122,14 @@ public class GridManager : MonoBehaviour, IEventListener
                 Vector2 centerPosition = (topLeft + topRight + bottomLeft + bottomRight) / 4;
 
                 GameObject squareBlock = Instantiate(centerPrefab, gridContainer); 
-                //squareBlock.GetComponent<BlockStick>().row = i;
+                squareBlock.GetComponent<BlockStick>().row = i;
                 blocks.Add(squareBlock);
                 RectTransform squareRect = squareBlock.GetComponent<RectTransform>();
                 squareRect.anchoredPosition = centerPosition;
                 squareRect.sizeDelta = new Vector2(nodeSize, nodeSize);
                 squareBlock.transform.SetSiblingIndex(0);
             }
-        }*/
+        }
 
         foreach (var node in nodes)
         {
@@ -140,7 +140,26 @@ public class GridManager : MonoBehaviour, IEventListener
         gridContainer.offsetMin = Vector2.zero;
         gridContainer.offsetMax = Vector2.zero;
     }
-    
-    
+
+    public void ClearGridData()
+    {
+        foreach (var stick in sticks)
+            if (stick)
+                Destroy(stick);
+        sticks.Clear();
+
+        foreach (var node in nodes)
+            if (node)
+                Destroy(node);
+        nodes.Clear();
+        
+        foreach (var block in blocks)
+            if (block)
+                Destroy(block);
+        blocks.Clear();
+
+        if (_gridContainer)
+            Destroy(_gridContainer.gameObject);
+    }
     
 }
