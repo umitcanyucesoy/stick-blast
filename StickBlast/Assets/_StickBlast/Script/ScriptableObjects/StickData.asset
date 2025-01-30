@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StickData
   m_EditorClassIdentifier: 
   singleMoveableObjects:
-  - {fileID: 3178443605321954981, guid: c6f716af4a3ef45aa898936adc5c0704, type: 3}
+  - {fileID: 8798409419402822058, guid: c6f716af4a3ef45aa898936adc5c0704, type: 3}
   - {fileID: 3178443605321954981, guid: 7b806c7b11423419c9c37375eaa47a4c, type: 3}
   doubleMoveableObjects:
   - {fileID: 3178443605321954981, guid: 2455640fe9b5f4f3185d660f0a1c347b, type: 3}

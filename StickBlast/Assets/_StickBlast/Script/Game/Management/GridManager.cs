@@ -22,7 +22,7 @@ public class GridManager : MonoBehaviour, IEventListener
     [Header("----- Stick Elements -----")]
     [SerializeField] private List<GameObject> nodes = new List<GameObject>();    
     [SerializeField] private List<GameObject> sticks = new List<GameObject>();    
-    [SerializeField] private List<GameObject> blocks = new List<GameObject>();
+    [SerializeField] public List<GameObject> blocks = new List<GameObject>();
     
     private RectTransform _gridContainer;
 

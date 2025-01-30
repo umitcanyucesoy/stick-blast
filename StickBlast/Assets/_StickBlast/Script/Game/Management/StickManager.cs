@@ -67,14 +67,18 @@ namespace _StickBlast.Script.Game.Management
                     GameObject stickPrefab = GetStickPrefabByIndex(i);
                     if (stickPrefab)
                     {
-                        Vector3 initialPosition = stickSpawnPoints[i].position + spawnOffset;
-                        GameObject spawnedStick = Instantiate(stickPrefab, initialPosition, Quaternion.Euler(0f,0f,-90f), stickSpawnPoints[i]);
+                        Vector3 spawnPosition = stickSpawnPoints[i].position;
+                
+                        GameObject spawnedStick = Instantiate(stickPrefab, spawnPosition, Quaternion.Euler(0f, 0f, -90f), stickSpawnPoints[i]);
+                
+                        spawnedStick.transform.localScale = Vector3.zero;
+
+                        spawnedStick.transform.DOScale(new Vector3(1.4f, 1.45f, 0f), animationDuration)
+                            .SetEase(Ease.OutBack);
+                
                         spawnedSticks.Add(spawnedStick);
                         spawnedSticksCount++;
-                        
-                        spawnedStick.transform.DOMove(stickSpawnPoints[i].position, animationDuration)
-                            .SetEase(Ease.OutBack);
-                        
+                
                         yield return new WaitForSeconds(spawnDelay);
                     }
                 }
